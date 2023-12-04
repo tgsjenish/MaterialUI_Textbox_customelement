@@ -3,12 +3,6 @@ import "@bpmn-io/form-js/dist/assets/form-js.css";
 import "@bpmn-io/form-js/dist/assets/form-js-editor.css";
 import "@bpmn-io/form-js/dist/assets/form-js-playground.css";
 import { Playground } from "@bpmn-io/form-js-playground";
-import ToggleExtension from "./Custom/Extentions/Toggle";
-import AutoCompleteExtension from "./Custom/Extentions/AutoComplete";
-import SignaturePadExtension from "./Custom/Extentions/SignaturePad";
-import AGGridExtension from "./Custom/Extentions/AGGrid";
-import FileExtension from "./Custom/Extentions/FileUpload";
-import PropertiesPanelExtension from "./Custom/Extentions/propertiesPanel";
 
 import MTextFieldExtension from "./Custom/Extentions/MaterialUI/TextField";
 import "./custom.css";
@@ -26,14 +20,7 @@ const FormPlayground = () => {
       data: {},
 
       // load rendering extension
-      additionalModules: [
-        // ToggleExtension,
-        MTextFieldExtension,
-        // AGGridExtension,
-        // AutoCompleteExtension,
-        // SignaturePadExtension,
-        //FileExtension,
-      ],
+      additionalModules: [MTextFieldExtension],
 
       // load properties panel extension
       // editorAdditionalModules: [PropertiesPanelExtension],
